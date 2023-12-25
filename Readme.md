@@ -4,8 +4,6 @@
 
 Proyecto para evaluar los conocimientos alcanzados en frontend
 
-[Abrir Proyecto Gamor](http://127.0.0.1:3000/index.html)
-
 [Orientación del Proyecto](./Orientacion.md)
 
 [Documento de Figma](https://www.figma.com/file/AMZB4c8u8KZXvffNQCFT8q/Gamor?type=design&node-id=0%3A1&mode=design&t=hMyUiJzlSoLXXKKd-1)

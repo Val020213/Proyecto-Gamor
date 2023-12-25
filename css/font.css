@@ -1,0 +1,10 @@
+body {
+  --default-font-size: 16px;
+}
+
+@font-face {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/assets/fonts/roboto-medium-webfont.woff2") format("woff2");
+}

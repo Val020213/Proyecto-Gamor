@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Gamor</title>
+  <link rel="icon" href="./assets/images/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+
+  <!-- <script src="./scripts/main.js"></script> -->
+  <script src="./scripts/twitch/auth.js"></script>
+  <script type="module" src="./scripts/twitch/game.js"></script>
+  <script src="./scripts/register.js"></script>
+  <script src="./scripts/login.js"></script>
+
+</head>
+
+<body theme="light">
+  <nav>
+    <div class="nav-links">
+      <a class="nav-user" selected href="./index.html">Home</a>
+      <a class="nav-user" href="./Streams.html">Streams</a>
+      <a class="nav-user" href="./Party.html">Party</a>
+      <a class="nav-user" href="./Premium.html">Premium</a>
+    </div>
+    <div>
+      <a id="change-theme" href="#" style="height: 48px; width: 48px;">
+        <svg class="theme" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15V9Z"
+            stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M6 6H9.5L12 3.5L14.5 6H18V9.5L20.5 12L18 14.5V18H14.5L12 20.5L9.5 18H6V14.5L3.5 12L6 9.5V6Z"
+            stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+      </a>
+      <script src="./scripts/theme.js"></script>
+      <div id="user-notlogin">
+        <a onclick="login()" class="ghost-button" href="#">Sign In</a>
+        <a onclick="register()" class="primary-button" href="#">Create Account</a>
+      </div>
+      <div id="user-login" style="display: none;">
+        <p>Welcome,
+        <p id="profile">Fulano</p>
+        </p>
+        <a onclick="logout()" class="primary-button" href="#">Log out</a>
+        <script src="./scripts/logout.js"></script>
+      </div>
+    </div>
+
+    <a class="logo" href="./index.html">Gamor</a>
+  </nav>
+
+  <section id="main-section" class="container-multirow-center"
+    style="background-color: var(--bg-color-level1); border-radius: 16px; overflow-x:hidden ;">
+    <section class="container-column-center" style="min-width: 290px; padding: 0;">
+      <div class="container-column-center" style="padding: 0px; gap: 32px;">
+        <div style="position: relative;">
+          <h1 class="title">start<br><span class="highlight">streaming</span><br>games<br>differently </h1>
+          <img class="ellipse" src="./assets/images/Ellipse 2.png" alt=""></img>
+          <img class="ellipse-1" src="./assets/images/Ellipse 2.png" alt=""></img>
+          <img class="ellipse-2" src="./assets/images/Ellipse 2.png" alt=""></img>
+        </div>
+        <div style="position: relative">
+          <p>gamor has now stream party playform</p>
+          <span class="stroke"><svg xmlns="http://www.w3.org/2000/svg" width="76" height="5" viewBox="0 0 76 5"
+              fill="none">
+              <path d="M0 3.98442L18.2377 4L39.1198 1.26961C40.4904 1.09041 41.8765 1.0613 43.2534 1.18281L75 3.98442"
+                stroke="var(--primary-color);" stroke-miterlimit="1.41421" />
+            </svg></span>
+        </div>
+        <div class="container-row-gap32">
+          <a onclick="register()" class="secondary-button">Create Account</a>
+          <a onclick="login()" class="ghost-button">Sign In</a>
+        </div>
+      </div>
+    </section>
+    <section id="imagen-section" class="container-img-column">
+      <div style="flex-direction: column;">
+        <h2 class="title2">Fortnite New Season</h2>
+        <p class="subtitle2">Join Live Stream</p>
+      </div>
+      <div class='reloj'>12 : 20</div>
+      <script src="./scripts/clock.js"></script>
+
+      </div>
+    </section>
+    <section class="container-column-center" style="min-width: 290px;">
+      <div class="container-column-center" style="gap: 32px;">
+        <div class="container-column-left">
+          <div>
+            <p class="category-no">01.</p>
+            <p class="category">Choose Platform</p>
+          </div>
+          <div id="choose-platform" class="plataform-container">
+            <script src="./scripts/platform.js"></script>
+            <a selected onclick="changePlatform(0)">🎉 Party</a>
+            <a onclick="changePlatform(1)"> Match</a>
+            <a onclick="changePlatform(2)">Streams</a>
+          </div>
+        </div>
+        <div class="container-column-left">
+          <div style="z-index: 1;">
+            <p class="category-no">02.</p>
+            <p class="category">Searching Game</p>
+          </div>
+          <div class="ranking-container" style="position: relative;">
+            <div id="search_game" id="ranking-head" class="ranking-title"
+              onclick="document.getElementById('choose-game').style = 'display: true'"
+              style="position: relative; border-bottom: 1px solid rgba(0, 0, 0, 0.10);">
+              <p id="game-name" style="margin: 0; ">SELECT GAME</p>
+              <a class="icon" style="background-color: transparent;">
+                <svg style="flex-shrink: 0;" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none">
+                  <path d="M12 6C12 6.53043 12.2107 7.03914 12.5858 7.41421C12.9609 7.78929 13.4696 8 14 8C14.5304 8 15.0391 7.78929 15.4142 
+                  7.41421C15.7893 7.03914 16 6.53043 16 6M12 6C12 5.46957 12.2107 4.96086 12.5858 4.58579C12.9609 4.21071 13.4696 4 14 4C14.5304 4 
+                  15.0391 4.21071 15.4142 4.58579C15.7893 4.96086 16 5.46957 16 6M12 6H4M16 6H20M6 12C6 12.5304 6.21071 13.0391 6.58579 13.4142C6.96086 
+                  13.7893 7.46957 14 8 14C8.53043 14 9.03914 13.7893 9.41421 13.4142C9.78929 13.0391 10 12.5304 10 12M6 12C6 11.4696 6.21071 10.9609 6.58579 
+                  10.5858C6.96086 10.2107 7.46957 10 8 10C8.53043 10 9.03914 10.2107 9.41421 10.5858C9.78929 10.9609 10 11.4696 10 12M6 12H4M10 12H20M15 18C15 
+                  18.5304 15.2107 19.0391 15.5858 19.4142C15.9609 19.7893 16.4696 20 17 20C17.5304 20 18.0391 19.7893 18.4142 19.4142C18.7893 19.0391 19 18.5304 
+                  19 18M15 18C15 17.4696 15.2107 16.9609 15.5858 16.5858C15.9609 16.2107 16.4696 16 17 16C17.5304 16 18.0391 16.2107 18.4142 16.5858C18.7893 16.9609 
+                  19 17.4696 19 18M15 18H4M19 18H20" stroke="black" stroke-opacity="0.5" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </a>
+            </div>
+            <script src="./scripts/twitch/chooseGame.js"></script>
+            <div onclick="this.style ='display: none'" id="choose-game" class="choose-game-menu" style="display: none;">
+            </div>
+            <table id="ranking-table">
+              <thead>
+                <tr>
+                  <th>Ranking-Name</th>
+                  <th>Profile</th>
+                  <th>Add</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+            <span class="dark-layer"></span>
+            <script type="module" src="./scripts/twitch/searchUser.js"></script>
+            <a id="search-user" class="ternary-button" style="z-index: 100;">
+              Search Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </section>
+
+  <section class="container-column-left">
+    <h1 style="
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    margin:0">Trending Categories</h1>
+    <div id="categories" class="container-multirow-center" style="justify-content: flex-start;">
+    </div>
+    <script src="./scripts/components/createCategory.js"></script>
+    <script src="./scripts/components/createPlayerCard.js"></script>
+  </section>
+
+  <!-- Pop-ups -->
+  <dialog id="pop-up-login" class="pop-up">
+    <div class="container-multirow-center"
+      style="max-width: fit-content; padding: 0; overflow: hidden;  gap:0px; box-shadow: 2px 8px 20px 2px rgba(0, 0, 0, 0.2); border-radius: 16px;">
+      <div class="container-img-column"
+        style="width: fit-content; height: 500px;position: relative; background-image: url(./assets/images/pi3.png);">
+        <div class="logo" style="font-size: 64px; top: 5%; bottom: unset; color: #fff;">Gamor</div>
+      </div>
+      <span class="pop-up-content">
+        <div class="container-column-center" style="gap: 32px; padding: 24px 32px;">
+
+          <h1>Log in</h1>
+          <div class="input-container">
+            <p>your username</p>
+            <input id="username" type="text" placeholder="Username" />
+          </div>
+          <div class="input-container" class="password-input">
+            <p>your password</p>
+            <input id="password" type="text" placeholder="password" />
+          </div>
+          <div class="input-container" style="gap: 8px;">
+            <a class="link" onclick="openRegister()">register here!</a>
+            <a id="success" class="ternary-button">Log In !</a>
+            <div class="footer">
+              <p style="font-size: 20px; color: var(--default-text-color); ">OR</p>
+              <a class="social-login">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                  <path
+                    d="M13.3529 23.04C7.26478 23.04 2.31104 18.0881 2.31104 12C2.31104 5.91187 7.26478 0.959991 13.3529 0.959991C16.111 0.959991 18.751 1.98187 20.7892 3.83812L21.1604 4.17749L17.5192 7.81874L17.1817 7.52999C16.1129 6.61499 14.7535 6.11062 13.3529 6.11062C10.1054 6.11062 7.46166 8.75249 7.46166 12C7.46166 15.2475 10.1054 17.8894 13.3529 17.8894C15.6948 17.8894 17.5454 16.6931 18.4173 14.655H12.8729V9.68437L23.6973 9.69937L23.7779 10.08C24.3423 12.7594 23.8904 16.7006 21.6029 19.5206C19.7092 21.855 16.9342 23.04 13.3529 23.04Z"
+                    fill="white" />
+                </svg>
+              </a>
+              <a class="social-login">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                  <g clip-path="url(#clip0_143_1750)">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M2.2624 0L0.649902 4.11937V20.955H6.3814V24H9.60528L12.6503 20.955H17.307L23.5755 14.6865V0H2.2624ZM21.4264 13.6125L17.8437 17.1937H12.1125L9.06753 20.2388V17.1937H4.2319V2.14875H21.4257V13.6125H21.4264ZM17.8437 6.2685V12.537H15.6949V6.2685H17.8437ZM12.1122 6.2685V12.537H9.9634V6.2685H12.1122Z"
+                      fill="white" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_143_1750">
+                      <rect width="24" height="24" fill="white" transform="translate(0.125)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+              <a class="social-login">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                  <g clip-path="url(#clip0_143_1753)">
+                    <path
+                      d="M20.7053 4.22781C19.1517 3.50093 17.4906 2.97267 15.7539 2.67188C15.5406 3.05749 15.2914 3.57614 15.1196 3.98873C13.2735 3.71109 11.4443 3.71109 9.63216 3.98873C9.46039 3.57614 9.20555 3.05749 8.99036 2.67188C7.25181 2.97267 5.58876 3.50287 4.03519 4.23166C0.901643 8.96686 0.0521888 13.5845 0.476917 18.1365C2.55525 19.6885 4.56941 20.6313 6.54957 21.2483C7.03849 20.5754 7.47453 19.8601 7.85018 19.1063C7.13475 18.8344 6.44953 18.499 5.80207 18.1095C5.97384 17.9822 6.14186 17.8492 6.30418 17.7123C10.2532 19.5594 14.5439 19.5594 18.4457 17.7123C18.61 17.8492 18.778 17.9822 18.9478 18.1095C18.2985 18.5009 17.6114 18.8363 16.896 19.1082C17.2716 19.8601 17.7058 20.5774 18.1966 21.2502C20.1786 20.6333 22.1947 19.6905 24.273 18.1365C24.7714 12.8595 23.4217 8.28434 20.7053 4.22781ZM8.38818 15.337C7.20272 15.337 6.23055 14.2303 6.23055 12.8826C6.23055 11.535 7.18196 10.4264 8.38818 10.4264C9.59442 10.4264 10.5666 11.533 10.5458 12.8826C10.5477 14.2303 9.59442 15.337 8.38818 15.337ZM16.3617 15.337C15.1763 15.337 14.2041 14.2303 14.2041 12.8826C14.2041 11.535 15.1555 10.4264 16.3617 10.4264C17.568 10.4264 18.5401 11.533 18.5194 12.8826C18.5194 14.2303 17.568 15.337 16.3617 15.337Z"
+                      fill="white" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_143_1753">
+                      <rect width="24" height="24" fill="white" transform="translate(0.375)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
+  </dialog>
+
+  <dialog id="register-pop-up" class="pop-up">
+    <div class="container-multirow-center"
+      style="max-width: fit-content; padding: 0; overflow: hidden;  gap:0px; box-shadow: 2px 8px 20px 2px rgba(0, 0, 0, 0.2); border-radius: 16px;">
+      <div class="container-img-column"
+        style="width: fit-content; height: 565px;position: relative; background-image: url(./assets/images/pi3.png);">
+        <div class="logo" style="font-size: 64px; top: 5%; bottom: unset; color: #fff;">Gamor</div>
+      </div>
+      <span class="pop-up-content">
+        <div class="container-column-center" style="gap: 32px; padding: 24px 32px;">
+
+          <h1>Register</h1>
+          <div class="input-container">
+            <p>your username</p>
+            <input id="username" type="text" placeholder="Username" />
+          </div>
+          <div class="input-container">
+            <p>your password</p>
+            <input id="password" type="text" placeholder="password" />
+          </div>
+          <div class="input-container">
+            <p>confirm your password</p>
+            <input id="confirm-password" type="text" placeholder="password" />
+          </div>
+          <div class="input-container" style="gap: 8px;">
+            <a onclick="openLogin()" class="link">login here!</a>
+            <a id="success" class="ternary-button">Join now !</a>
+            <div class="footer">
+              <p style="font-size: 20px; color: var(--default-text-color); ">OR</p>
+              <a class="social-login">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                  <path
+                    d="M13.3529 23.04C7.26478 23.04 2.31104 18.0881 2.31104 12C2.31104 5.91187 7.26478 0.959991 13.3529 0.959991C16.111 0.959991 18.751 1.98187 20.7892 3.83812L21.1604 4.17749L17.5192 7.81874L17.1817 7.52999C16.1129 6.61499 14.7535 6.11062 13.3529 6.11062C10.1054 6.11062 7.46166 8.75249 7.46166 12C7.46166 15.2475 10.1054 17.8894 13.3529 17.8894C15.6948 17.8894 17.5454 16.6931 18.4173 14.655H12.8729V9.68437L23.6973 9.69937L23.7779 10.08C24.3423 12.7594 23.8904 16.7006 21.6029 19.5206C19.7092 21.855 16.9342 23.04 13.3529 23.04Z"
+                    fill="white" />
+                </svg>
+              </a>
+              <a class="social-login">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                  <g clip-path="url(#clip0_143_1750)">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M2.2624 0L0.649902 4.11937V20.955H6.3814V24H9.60528L12.6503 20.955H17.307L23.5755 14.6865V0H2.2624ZM21.4264 13.6125L17.8437 17.1937H12.1125L9.06753 20.2388V17.1937H4.2319V2.14875H21.4257V13.6125H21.4264ZM17.8437 6.2685V12.537H15.6949V6.2685H17.8437ZM12.1122 6.2685V12.537H9.9634V6.2685H12.1122Z"
+                      fill="white" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_143_1750">
+                      <rect width="24" height="24" fill="white" transform="translate(0.125)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+              <a class="social-login">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                  <g clip-path="url(#clip0_143_1753)">
+                    <path
+                      d="M20.7053 4.22781C19.1517 3.50093 17.4906 2.97267 15.7539 2.67188C15.5406 3.05749 15.2914 3.57614 15.1196 3.98873C13.2735 3.71109 11.4443 3.71109 9.63216 3.98873C9.46039 3.57614 9.20555 3.05749 8.99036 2.67188C7.25181 2.97267 5.58876 3.50287 4.03519 4.23166C0.901643 8.96686 0.0521888 13.5845 0.476917 18.1365C2.55525 19.6885 4.56941 20.6313 6.54957 21.2483C7.03849 20.5754 7.47453 19.8601 7.85018 19.1063C7.13475 18.8344 6.44953 18.499 5.80207 18.1095C5.97384 17.9822 6.14186 17.8492 6.30418 17.7123C10.2532 19.5594 14.5439 19.5594 18.4457 17.7123C18.61 17.8492 18.778 17.9822 18.9478 18.1095C18.2985 18.5009 17.6114 18.8363 16.896 19.1082C17.2716 19.8601 17.7058 20.5774 18.1966 21.2502C20.1786 20.6333 22.1947 19.6905 24.273 18.1365C24.7714 12.8595 23.4217 8.28434 20.7053 4.22781ZM8.38818 15.337C7.20272 15.337 6.23055 14.2303 6.23055 12.8826C6.23055 11.535 7.18196 10.4264 8.38818 10.4264C9.59442 10.4264 10.5666 11.533 10.5458 12.8826C10.5477 14.2303 9.59442 15.337 8.38818 15.337ZM16.3617 15.337C15.1763 15.337 14.2041 14.2303 14.2041 12.8826C14.2041 11.535 15.1555 10.4264 16.3617 10.4264C17.568 10.4264 18.5401 11.533 18.5194 12.8826C18.5194 14.2303 17.568 15.337 16.3617 15.337Z"
+                      fill="white" />
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_143_1753">
+                      <rect width="24" height="24" fill="white" transform="translate(0.375)" />
+                    </clipPath>
+                  </defs>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </span>
+    </div>
+  </dialog>
+
+  <dialog id="pop-up-message-success" class="pop-up" style="z-index: 1000;">
+    <div class="container-column-center" style="max-width: 996px; width: max-content;padding: 32px;">
+      <img src="./assets/images/success_animation.gif">
+      <p id="pop-up-message-text" style="color: #11b817">Ready for the adventure !</p>
+    </div>
+  </dialog>
+
+  <dialog id="pop-up-message-error" class="pop-up" style="z-index: 1000;">
+    <div class="container-column-center" style="max-width: 996px; width: max-content;padding: 32px;">
+      <img src="./assets/images/error_animation.gif">
+      <p id="pop-up-message-text" style="  color: #ff0000;">Ups, check your password or your user</p>
+    </div>
+  </dialog>
+
+</body>
+
+</html>

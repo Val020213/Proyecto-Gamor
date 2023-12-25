@@ -1,0 +1,90 @@
+body[theme="light"] {
+  --bg-color-level0: #f0f1f4;
+  --bg-color-level1: #f9fafe;
+  --bg-color-level2: #ffffff;
+
+  --primary-color: #7f34ef;
+  --secondary-color: #ff8946;
+
+  --default-text-color: #212121;
+  --inactive-text-color: #9e9e9e;
+
+  /* Button */
+
+  /*Nav bar*/
+  --primary-button-bgcolor: #000000;
+  --primary-button-border-color: #000000;
+  --primary-button-text-color: #ffffff;
+
+  /*Promotion*/
+  --secondary-button-bgcolor: #ffffff;
+  --secondary-button-text-color: #000000;
+
+  /*Platform*/
+  --platform-button-bgcolor: #f4f3f4;
+
+  /*Ranking*/
+  --ternary-button-bgcolor: #000000;
+  --ternary-button-text-color: #ffffff;
+
+  --auxialiar-color: #eeeeee;
+
+  --elipse-img: url("../assets/images/Ellipse\ 1.png");
+  --elipse2-img: url("../assets/Ellipse\ 2.png");
+
+  --promo-img: url("../assets/images/promo\ 1.png");
+
+  --promo-minicard-player1: url("./assets/images/pi4.png");
+  --promo-minicard-player2: url("./assets/images/pi3.png");
+
+  --layer-gradient: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0.13%,
+    rgba(255, 255, 255, 0.64) 92.08%
+  );
+}
+
+body[theme="dark"] {
+  --bg-color-level0: #1b2029;
+  --bg-color-level1: #222730;
+  --bg-color-level2: #1b2029;
+
+  --primary-color: #ff8946;
+  --secondary-color: #7f34ef;
+
+  --default-text-color: #ffffff;
+
+  /* Button */
+
+  /*Nav bar*/
+  --primary-button-bgcolor: #000000;
+  --primary-button-border-color: #565656;
+  --primary-button-text-color: #ffffff;
+
+  /*Promotion*/
+  --secondary-button-bgcolor: #353a40;
+  --secondary-button-text-color: #ffffff;
+
+  /*Platform*/
+  --platform-button-bgcolor: rgba(145, 147, 152, 0.2);
+
+  /*Ranking*/
+  --ternary-button-bgcolor: #ffffff;
+  --ternary-button-text-color: #000000;
+
+  --auxialiar-color: #000000;
+
+  --elipse-img: url("../assets/images/Ellipse\ 2.png");
+  --elipse2-img: url("../assets/images/Ellipse\ 1.png");
+
+  --promo-img: url("../assets/images/promo\ 2.png");
+
+  --promo-minicard-player1: url("./assets/images/pi2.png");
+  --promo-minicard-player2: url("./assets/images/pi1.png");
+
+  --layer-gradient: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0.13%,
+    rgba(0, 0, 0, 0.64) 92.08%
+  );
+}

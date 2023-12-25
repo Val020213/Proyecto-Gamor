@@ -1,0 +1,391 @@
+@import url(font.css);
+@import url(themes.css);
+@import url(token.css);
+@import url(navbar.css);
+@import url(ranking.css);
+@import url(login.css);
+
+p,
+div,
+h1,
+h2,
+h3,
+a,
+button {
+  color: var(--default-text-color);
+  font-size: 16px;
+  font-family: Roboto;
+  font-weight: normal;
+}
+
+p {
+  margin: 0px;
+}
+
+body {
+  background-color: var(--bg-color-level0);
+  display: flex;
+  padding: 0px 192px;
+  flex-direction: column;
+  align-items: center;
+  gap: 64px;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 16px;
+  color: var(--default-text-color);
+}
+
+.theme {
+  width: 24px;
+  height: 24px;
+  border-radius: 99px;
+}
+
+.theme path {
+  stroke: var(--default-text-color);
+}
+
+.theme:hover {
+  width: 48px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.theme path {
+  transition: stroke 0.3s ease;
+}
+
+.theme:hover path {
+  animation: stroke-color-transition 3s ease-in-out infinite;
+}
+
+@keyframes stroke-color-transition {
+  0% {
+    stroke: var(--primary-color);
+  }
+  50% {
+    stroke: var(--secondary-color);
+  }
+  100% {
+    stroke: var(--primary-color);
+  }
+}
+
+button,
+a,
+div,
+section {
+  display: flex;
+  text-decoration: none;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+button,
+a {
+  letter-spacing: 0.1px;
+  font-weight: 500;
+  line-height: 20px; /* 142.857% */
+
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 16px;
+  color: var(--default-text-color);
+}
+
+.primary-button {
+  color: var(--primary-button-text-color);
+  background-color: var(--primary-button-bgcolor);
+  height: 56px;
+  padding: 4px 24px;
+  box-shadow: 2px 8px 20px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 999px;
+}
+
+.primary-button:hover {
+  cursor: pointer;
+  animation: box-shadow-color-transition 3s ease-in-out infinite;
+}
+
+.secondary-button {
+  background-color: var(--secondary-button-bgcolor);
+  height: 56px;
+  padding: 4px 24px;
+  border-radius: 999px;
+  box-shadow: 2px 8px 20px 2px rgba(0, 0, 0, 0.2);
+}
+
+.secondary-button:hover {
+  cursor: pointer;
+  animation: box-shadow-color-transition 3s ease-in-out infinite;
+}
+
+.ternary-button {
+  width: -webkit-fill-available;
+  height: 56px;
+  color: var(--ternary-button-text-color);
+  background-color: var(--ternary-button-bgcolor);
+
+  padding: 8px 40px;
+  border-radius: 8px;
+  box-shadow: 2px 8px 20px 2px rgba(0, 0, 0, 0.2);
+}
+
+.ternary-button:hover {
+  cursor: pointer;
+  animation: box-shadow-color-transition 3s ease-in-out infinite;
+}
+
+.ghost-button {
+  height: 56px;
+  padding: 4px 24px;
+}
+
+.ghost-button:hover {
+  cursor: pointer;
+  animation: text-shadow-color-transition 3s ease-in-out infinite;
+}
+
+.plataform-container {
+  display: flex;
+  align-items: flex-start;
+  padding: 4px;
+  gap: 16px;
+  border-radius: 999px;
+  background: var(--bg-color-level2);
+  min-width: 285px;
+}
+
+.plataform-container a {
+  display: flex;
+  padding: 14px 16px 14px 12px;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  border-radius: 999px;
+}
+
+.plataform-container a[selected] {
+  background-color: var(--platform-button-bgcolor);
+}
+
+.plataform-container a:hover {
+  background-color: var(--platform-button-bgcolor);
+  animation: box-shadow-pulsate 1.5s ease-in-out infinite;
+}
+
+/*  PROMOTION */
+.title {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: 1.5px;
+}
+
+.highlight {
+  color: var(--secondary-color);
+}
+
+.stroke {
+  stroke-width: 1px;
+  stroke: var(--Primary-Color, #7f34ef);
+  position: absolute;
+  right: 72px;
+  bottom: -10px;
+}
+
+.category-container {
+  display: flex;
+  width: 310px;
+  height: 160px;
+  padding: 28px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: var(--bg-color-level1);
+}
+
+.category-container:hover {
+  animation: box-shadow-pulsate 1s ease-in-out infinite;
+  background: var(--primary-color);
+  background-image: url("../assets/images/fortnite-battle-royale-desktop-89x63ojigka27f3v-removebg-preview.png");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+}
+
+.category-container:hover p {
+  color: #fff;
+}
+
+.container-row-gap32 {
+  display: flex;
+  padding: 0px 4px;
+  align-items: center;
+  gap: 32px;
+}
+
+.container-column-center {
+  flex-direction: column;
+  flex: 1 0 0;
+  display: flex;
+  padding: 16px;
+}
+
+.container-column-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+  gap: 16px;
+}
+
+.container-multirow-center {
+  align-items: center;
+  align-content: flex-start;
+  align-self: stretch;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+}
+
+.container-img-column {
+  display: flex;
+  justify-content: flex-start;
+  width: 298px;
+  height: 554px;
+  min-width: 298px;
+  padding: 33px 25px;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+
+  position: relative;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-color: var(--primary-color);
+  background-image: var(--promo-img);
+}
+
+.title2 {
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin: 0px;
+}
+
+.subtitle2 {
+  color: rgba(0, 0, 0, 0.25);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: normal;
+  margin: 0px;
+}
+
+.category-no {
+  color: #939393;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 120%; /* 28.8px */
+  margin: 0px;
+}
+
+.category {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 120%;
+  margin: 0px;
+}
+
+.choose-game-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 8px;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: absolute;
+  top: 72px;
+  left: 0;
+  width: 85%;
+  padding: 24px;
+  height: 180px;
+  overflow-y: scroll;
+  background-color: var(--bg-color-level2);
+  z-index: 100;
+}
+
+.choose-game-menu p {
+  color: var(--default-text-color);
+  font-size: 16px;
+  padding-left: 16px;
+}
+
+.choose-game-menu p:hover {
+  color: var(--secondary-color);
+}
+
+/* */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Animations*/
+@keyframes box-shadow-pulsate {
+  0% {
+    box-shadow: none;
+  }
+  50% {
+    box-shadow: 0 0 25px var(--primary-color);
+  }
+  100% {
+    box-shadow: none;
+  }
+}
+
+@keyframes box-shadow-color-transition {
+  0% {
+    box-shadow: 0 0 25px var(--primary-color);
+  }
+  50% {
+    box-shadow: 0 0 25px var(--secondary-color);
+  }
+  100% {
+    box-shadow: 0 0 25px var(--primary-color);
+  }
+}
+
+@keyframes text-shadow-color-transition {
+  0% {
+    text-shadow: 0 0 2px var(--primary-color);
+  }
+
+  50% {
+    text-shadow: 0 0 2px var(--secondary-color);
+  }
+
+  100% {
+    text-shadow: 0 0 2px var(--primary-color);
+  }
+}
+
+@media screen and (max-width: 1076px) {
+  .container-img-column {
+    width: 100%;
+  }
+
+  .category-container {
+    width: 92%;
+  }
+}

@@ -1,0 +1,91 @@
+.minicard-player {
+  width: 50px;
+  height: 50px;
+
+  border-radius: 8px;
+  backdrop-filter: blur(2px);
+
+  background-color: rgba(0, 0, 0, 0.1);
+  background-image: var(--promo-img);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom; /* Agrega esta línea */
+}
+
+.badge {
+  display: inline-block;
+  padding: 10px;
+  background-color: #000;
+  border-radius: 50%;
+  position: relative;
+
+  width: 16px;
+  height: 16px;
+  padding: 2px;
+
+  flex-shrink: 0;
+  position: absolute;
+  top: -8px;
+  left: -8px;
+}
+
+.reloj {
+  width: 116px;
+  height: 45px;
+  padding: 0px 21px;
+  border-radius: 99px;
+  background: #fff;
+  color: var(--primary-color);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 49px; /* 272.222% */
+  letter-spacing: 0.1px;
+}
+
+.ellipse {
+  position: absolute;
+  top: 64px;
+  left: 0px;
+  width: 202px;
+  height: 102px;
+}
+
+.ellipse-1 {
+  position: absolute;
+  top: 110px;
+  left: 0px;
+  width: 202px;
+  height: 102px;
+}
+
+.ellipse-2 {
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  width: 202px;
+  height: 102px;
+}
+
+.icon {
+  display: flex;
+  width: 24px;
+  height: 24px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  flex-shrink: 0;
+
+  color: var(--default-text-color);
+  background: var(--auxialiar-color);
+}
+
+svg .icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: var(--default-text-color);
+}
+
+.category-container svg path {
+  stroke: var(--default-text-color);
+}

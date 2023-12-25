@@ -2,7 +2,7 @@
 
 ![Captura de pantalla del login](./assets/images/Captura%20desde%202023-12-25%2011-46-26.png)
 
-Proyecto para evaluar los conocimientos alcanzados en frontend
+> Osvaldo R. Moreno Prieto. 2023. Proyecto para evaluar los conocimientos alcanzados en frontend
 
 [Orientación del Proyecto](./Orientacion.md)
 

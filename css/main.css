@@ -59,7 +59,7 @@ body {
 .theme:hover path {
   animation: stroke-color-transition 3s ease-in-out infinite;
 }
-
+/* 
 @keyframes stroke-color-transition {
   0% {
     stroke: var(--primary-color);
@@ -70,7 +70,7 @@ body {
   100% {
     stroke: var(--primary-color);
   }
-}
+} */
 
 button,
 a,
@@ -342,7 +342,7 @@ a {
 }
 
 /* Animations*/
-@keyframes box-shadow-pulsate {
+/* @keyframes box-shadow-pulsate {
   0% {
     box-shadow: none;
   }
@@ -378,7 +378,7 @@ a {
   100% {
     text-shadow: 0 0 2px var(--primary-color);
   }
-}
+} */
 
 @media screen and (max-width: 1076px) {
   .container-img-column {

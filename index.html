@@ -18,99 +18,111 @@
 </head>
 
 <body theme="light">
-  <nav>
-    <div class="nav-links">
-      <a class="nav-user" selected href="./index.html">Home</a>
-      <a class="nav-user" href="./Streams.html">Streams</a>
-      <a class="nav-user" href="./Party.html">Party</a>
-      <a class="nav-user" href="./Premium.html">Premium</a>
-    </div>
-    <div>
-      <a id="change-theme" href="#" style="height: 48px; width: 48px;">
-        <svg class="theme" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path
-            d="M12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15V9Z"
-            stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-          <path d="M6 6H9.5L12 3.5L14.5 6H18V9.5L20.5 12L18 14.5V18H14.5L12 20.5L9.5 18H6V14.5L3.5 12L6 9.5V6Z"
-            stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-      </a>
-      <script src="./scripts/theme.js"></script>
-      <div id="user-notlogin">
-        <a onclick="login()" class="ghost-button" href="#">Sign In</a>
-        <a onclick="register()" class="primary-button" href="#">Create Account</a>
+  <header>
+    <nav>
+      <div>
+        <button active href="./index.html">Home</button>
+        <button>Streams</button>
+        <button>Party</button>
+        <button>Premium</button>
       </div>
-      <div id="user-login" style="display: none;">
-        <p>Welcome,
-        <p id="profile">Fulano</p>
-        </p>
-        <a onclick="logout()" class="primary-button" href="#">Log out</a>
-        <script src="./scripts/logout.js"></script>
+
+      <div>
+
+        <button>
+          <svg class="theme" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path
+              d="M12 9C11.2044 9 10.4413 9.31607 9.87868 9.87868C9.31607 10.4413 9 11.2044 9 12C9 12.7956 9.31607 13.5587 9.87868 14.1213C10.4413 14.6839 11.2044 15 12 15V9Z"
+              stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            <path d="M6 6H9.5L12 3.5L14.5 6H18V9.5L20.5 12L18 14.5V18H14.5L12 20.5L9.5 18H6V14.5L3.5 12L6 9.5V6Z"
+              stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+        </button>
+
+        <script src="./scripts/theme.js"></script>
+
+        <div>
+          <button onclick="login()" class="ghost-button" href="#">Sign In</button>
+          <button onclick="register()" class="primary-button" href="#">Create Account</button>
+        </div>
+
+        <div id="user-login">
+          <p>Welcome,
+          <p id="profile">Fulano</p>
+          </p>
+          <button onclick="logout()">Log out</button>
+          <script src="./scripts/logout.js"></script>
+
+        </div>
       </div>
-    </div>
 
-    <a class="logo" href="./index.html">Gamor</a>
-  </nav>
+      <a class="logo" href="./index.html">Gamor</a>
 
-  <section id="main-section" class="container-multirow-center"
-    style="background-color: var(--bg-color-level1); border-radius: 16px; overflow-x:hidden ;">
-    <section class="container-column-center" style="min-width: 290px; padding: 0;">
-      <div class="container-column-center" style="padding: 0px; gap: 32px;">
-        <div style="position: relative;">
-          <h1 class="title">start<br><span class="highlight">streaming</span><br>games<br>differently </h1>
+    </nav>
+
+  </header>
+
+  <section id="main-section">
+    <section>
+      <div>
+
+        <div>
+          <h1>start<br><span class="highlight">streaming</span><br>games<br>differently</h1>
           <img class="ellipse" src="./assets/images/Ellipse 2.png" alt=""></img>
           <img class="ellipse-1" src="./assets/images/Ellipse 2.png" alt=""></img>
           <img class="ellipse-2" src="./assets/images/Ellipse 2.png" alt=""></img>
         </div>
-        <div style="position: relative">
+
+        <div>
           <p>gamor has now stream party playform</p>
           <span class="stroke"><svg xmlns="http://www.w3.org/2000/svg" width="76" height="5" viewBox="0 0 76 5"
               fill="none">
               <path d="M0 3.98442L18.2377 4L39.1198 1.26961C40.4904 1.09041 41.8765 1.0613 43.2534 1.18281L75 3.98442"
                 stroke="var(--primary-color);" stroke-miterlimit="1.41421" />
-            </svg></span>
+            </svg>
+          </span>
         </div>
-        <div class="container-row-gap32">
-          <a onclick="register()" class="secondary-button">Create Account</a>
-          <a onclick="login()" class="ghost-button">Sign In</a>
+
+        <div>
+          <button onclick="register()">Create Account</button>
+          <button onclick="login()">Sign In</button>
         </div>
       </div>
     </section>
-    <section id="imagen-section" class="container-img-column">
-      <div style="flex-direction: column;">
-        <h2 class="title2">Fortnite New Season</h2>
-        <p class="subtitle2">Join Live Stream</p>
+
+    <section id="imagen-section">
+      <div>
+        <h2>Fortnite New Season</h2>
+        <p>Join Live Stream</p>
       </div>
+
       <div class='reloj'>12 : 20</div>
       <script src="./scripts/clock.js"></script>
-
-      </div>
     </section>
-    <section class="container-column-center" style="min-width: 290px;">
-      <div class="container-column-center" style="gap: 32px;">
-        <div class="container-column-left">
+
+    <section>
+      <div>
+        <div>
           <div>
-            <p class="category-no">01.</p>
-            <p class="category">Choose Platform</p>
+            <p>01.</p>
+            <p>Choose Platform</p>
           </div>
-          <div id="choose-platform" class="plataform-container">
+          <div id="choose-platform">
             <script src="./scripts/platform.js"></script>
-            <a selected onclick="changePlatform(0)">🎉 Party</a>
-            <a onclick="changePlatform(1)"> Match</a>
-            <a onclick="changePlatform(2)">Streams</a>
+            <button selected onclick="changePlatform(0)">🎉 Party</button>
+            <button onclick="changePlatform(1)"> Match</button>
+            <button onclick="changePlatform(2)">Streams</button>
           </div>
         </div>
-        <div class="container-column-left">
-          <div style="z-index: 1;">
-            <p class="category-no">02.</p>
-            <p class="category">Searching Game</p>
+        <div>
+          <div>
+            <p>02.</p>
+            <p>Searching Game</p>
           </div>
-          <div class="ranking-container" style="position: relative;">
-            <div id="search_game" id="ranking-head" class="ranking-title"
-              onclick="document.getElementById('choose-game').style = 'display: true'"
-              style="position: relative; border-bottom: 1px solid rgba(0, 0, 0, 0.10);">
+          <div>
+            <div id="ranking-head" onclick="">
               <p id="game-name" style="margin: 0; ">SELECT GAME</p>
-              <a class="icon" style="background-color: transparent;">
+              <button>
                 <svg style="flex-shrink: 0;" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                   viewBox="0 0 24 24" fill="none">
                   <path d="M12 6C12 6.53043 12.2107 7.03914 12.5858 7.41421C12.9609 7.78929 13.4696 8 14 8C14.5304 8 15.0391 7.78929 15.4142 
@@ -123,9 +135,10 @@
                   19 17.4696 19 18M15 18H4M19 18H20" stroke="black" stroke-opacity="0.5" stroke-width="1.5"
                     stroke-linecap="round" stroke-linejoin="round" />
                 </svg>
-              </a>
+              </button>
             </div>
             <script src="./scripts/twitch/chooseGame.js"></script>
+
             <div onclick="this.style ='display: none'" id="choose-game" class="choose-game-menu" style="display: none;">
             </div>
             <table id="ranking-table">

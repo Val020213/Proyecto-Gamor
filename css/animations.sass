@@ -1,0 +1,41 @@
+@import url("./themes.css")
+
+@keyframes stroke-transition
+    0%
+        stroke: var(--primary-color)
+
+    50%
+        stroke: var(--secondary-color)
+
+    100%
+        stroke: var(--primary-color)
+
+@keyframes box-shadow-pulsate
+    0%
+        box-shadow: none
+
+    50%
+        box-shadow: 0 0 25px var(--primary-color)
+
+    100%
+        box-shadow: none
+
+@keyframes box-shadow-transition
+    0%
+        box-shadow: 0 0 25px var(--primary-color)
+
+    50%
+        box-shadow: 0 0 25px var(--secondary-color)
+
+    100%
+        box-shadow: 0 0 25px var(--primary-color)
+
+@keyframes text-shadow-transition
+    0%
+        text-shadow: 0 0 2px var(--primary-color)
+
+    50%
+        text-shadow: 0 0 2px var(--secondary-color)
+
+    100%
+        text-shadow: 0 0 2px var(--primary-color)

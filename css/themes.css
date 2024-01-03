@@ -12,16 +12,16 @@ body[theme="light"] {
   /* Button */
 
   /*Nav bar*/
-  --primary-button-bgcolor: #000000;
+  --primary-button-bg-color: #000000;
   --primary-button-border-color: #000000;
   --primary-button-text-color: #ffffff;
 
   /*Promotion*/
-  --secondary-button-bgcolor: #ffffff;
+  --secondary-button-bg-color: #ffffff;
   --secondary-button-text-color: #000000;
 
   /*Platform*/
-  --platform-button-bgcolor: #f4f3f4;
+  --platform-button-bg-color: #f4f3f4;
 
   /*Ranking*/
   --ternary-button-bgcolor: #000000;
@@ -57,19 +57,19 @@ body[theme="dark"] {
   /* Button */
 
   /*Nav bar*/
-  --primary-button-bgcolor: #000000;
+  --primary-button-bg-color: #000000;
   --primary-button-border-color: #565656;
   --primary-button-text-color: #ffffff;
 
   /*Promotion*/
-  --secondary-button-bgcolor: #353a40;
+  --secondary-button-bg-color: #353a40;
   --secondary-button-text-color: #ffffff;
 
   /*Platform*/
-  --platform-button-bgcolor: rgba(145, 147, 152, 0.2);
+  --platform-button-bg-color: rgba(145, 147, 152, 0.2);
 
   /*Ranking*/
-  --ternary-button-bgcolor: #ffffff;
+  --ternary-button-bg-color: #ffffff;
   --ternary-button-text-color: #000000;
 
   --auxialiar-color: #000000;

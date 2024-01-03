@@ -1,0 +1,103 @@
+@import url("./themes.css")
+
+%font
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, Roboto,'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+    font: 1rem/1.5
+    margin: 0
+    color: var(--default-text-color)
+
+%text
+    overflow: hidden
+    display: -webkit-box
+    -webkit-line-clamp: 3
+    -webkit-box-orient: vertical
+
+%title
+    @extend %font
+    font-size: 1.5rem
+    font: bold
+
+.hidden
+    display: none
+
+%flex
+    display: flex
+
+%flex-center
+    justify-content: center
+    align-items: center
+
+%flex-left
+    justify-content: flex-start
+    align-content: center
+
+%flex-spaced
+    justify-content: space-between
+    justify-items: center
+
+%flex-column
+    @extend %flex
+    flex-direction: column
+
+%flex-column-center
+    @extend %flex-column
+    @extend %flex-center
+
+%flex-column-left
+    @extend %flex-column
+    @extend %flex-left
+
+%flex-column-spaced
+    @extend %flex-column
+    @extend %flex-spaced
+
+%flex-row
+    @extend %flex
+    flex-direction: row
+
+%flex-row-left
+    @extend %flex-row
+    @extend %flex-left
+
+%flex-row-center
+    @extend %flex-row
+    @extend %flex-center
+
+%flex-row-spaced
+    @extend %flex-row
+    @extend %flex-spaced
+
+%flex-multiline
+    @extend %flex
+    flex-wrap: wrap
+
+%flex-multiline-center
+    @extend %flex-multiline
+    @extend %flex-center
+
+%flex-multiline-left
+    @extend %flex-multiline
+    @extend %flex-left
+
+%flex-multiline-spaced
+    @extend %flex-multiline
+    @extend %flex-spaced
+
+%icon
+    @extend %flex-row-center
+    width: 1.5rem
+    height: 1.5rems
+    padding: 0
+
+.icon
+    @extend %icon
+
+.icon-button
+    @extend %icon
+    cursor: pointer
+
+svg
+    @extend %icon
+    border: none
+    path
+        stroke: var(--text-color)
